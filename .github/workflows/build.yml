@@ -22,7 +22,7 @@ jobs:
               with:
                   target_branch: gh-pages
                   build_dir: target
-                  fqdn: hydrogen.boba.best
+                  fqdn: hydrogen.alefvanoon.xyz
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
