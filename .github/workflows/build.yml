@@ -29,8 +29,10 @@ jobs:
               uses: aquiladev/ipfs-action@master
               id: infura
               with:
-                path: ./build
-                service: ipfs
+                path: ./public
+                service: infura
+                host: ipfs.infura.io
+                port: 5001
                 timeout: 120000
                 verbose: true
             - name: Update DNSLink
