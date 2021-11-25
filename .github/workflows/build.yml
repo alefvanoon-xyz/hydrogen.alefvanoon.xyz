@@ -30,6 +30,8 @@ jobs:
               with:
                 path: ./public
                 service: infura
+                verbose: true
+                timeout: 180000
             - name: Update DNSLink
               run: npx dnslink-cloudflare -d alefvanoon.xyz -l /ipfs/${{ steps.ipfs-add.outputs.hash }} -r _dnslink.hydrogen
               env:
