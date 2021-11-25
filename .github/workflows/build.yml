@@ -25,16 +25,16 @@ jobs:
                   fqdn: hydrogen.alefvanoon.xyz
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
             - name: Upload to Infura
               uses: aquiladev/ipfs-action@master
               id: infura
               with:
-                path: ./public
+                path: ./build
                 service: infura
-                host: ipfs.infura.io
-                port: 5001
                 timeout: 120000
                 verbose: true
+                
             - name: Update DNSLink
               run: npx dnslink-cloudflare -d alefvanoon.xyz -l /ipfs/${{ steps.ipfs-add.outputs.hash }} -r _dnslink.hydrogen
               env:
