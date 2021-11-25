@@ -30,7 +30,7 @@ jobs:
               id: infura
               with:
                 path: ./build
-                service: infura
+                service: ipfs
                 timeout: 120000
                 verbose: true
             - name: Update DNSLink
